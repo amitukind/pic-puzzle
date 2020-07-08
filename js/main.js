@@ -141,7 +141,7 @@ var counter = 0;
 function update() { }
 function onObjectClicked(pointer, gameObject) {
   if (gameObject.optionText) {
-    console.log(gameObject.optionText)
+    gameObject.removeInteractive();
     this.scene.tweens.add({
       targets: gameObject.optionText,
       duration: 200,
