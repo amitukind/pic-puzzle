@@ -25,6 +25,8 @@ function preload() {
   this.load.image("tph", "images/TopPH.jpg");
   this.load.image("sph", "images/SidePH.jpg");
   this.load.image("dph", "images/DownPH.jpg");
+  this.load.image("brect", "images/brect.png");
+  this.load.image("frect", "images/frect.png");
 }
 
 function create() {
@@ -105,6 +107,41 @@ function create() {
       tiger.alpha = 1;
     },
   });
+
+  var temp = (this.add
+    .image(270 - 130, 600, "brect")
+    .setDisplaySize(60, 60).tint = 0x008000);
+  this.add.image(270 - 65, 600, "brect").setDisplaySize(60, 60).tint = 0x008000;
+  this.add.image(270, 600, "brect").setDisplaySize(60, 60).tint = 0x008000;
+  this.add.image(270 + 65, 600, "brect").setDisplaySize(60, 60).tint = 0x008000;
+  this.add
+    .image(270 + 130, 600, "brect")
+    .setDisplaySize(60, 60).tint = 0x008000;
+
+  var temp2 = this.add.image(240 - 65, 670, "frect").setDisplaySize(60, 60);
+  this.add.image(240, 670, "frect").setDisplaySize(60, 60);
+  this.add.image(240 + 65, 670, "frect").setDisplaySize(60, 60);
+  this.add.image(240 + 130, 670, "frect").setDisplaySize(60, 60);
+  this.add.image(240 - 65, 670 + 65, "frect").setDisplaySize(60, 60);
+  this.add.image(240, 670 + 65, "frect").setDisplaySize(60, 60);
+  this.add.image(240 + 65, 670 + 65, "frect").setDisplaySize(60, 60);
+  this.add.image(240 + 130, 670 + 65, "frect").setDisplaySize(60, 60);
+  temp.tint = 0x008000;
+  var style = {
+    font: "bold 40px Arial",
+    fill: "#fff",
+    boundsAlignH: "center",
+    boundsAlignV: "middle",
+    align: "center",
+  };
+  this.add.text(240 - 65 - 13, 670 - 20, "T", style);
+  this.add.text(240 - 13, 670 - 20, "S", style);
+  this.add.text(240 + 65 - 13, 670 - 20, "I", style);
+  this.add.text(240 + 130 - 13, 670 - 20, "P", style);
+  this.add.text(240 - 65 - 13, 670 + 65 - 20, "G", style);
+  this.add.text(240 - 13, 670 + 65 - 20, "D", style);
+  this.add.text(240 + 65 - 13, 670 + 65 - 20, "E", style);
+  this.add.text(240 + 130 - 13, 670 + 65 - 20, "R", style);
   this.input.on("gameobjectdown", onObjectClicked);
 }
 
