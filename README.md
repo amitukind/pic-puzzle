@@ -1,5 +1,5 @@
 ## About
-Phaser3 based picture puzzle game prototype.
+[Phaser3](https://phaser.io/phaser3) based picture puzzle game prototype.
 
 [Demo](http://amitukind.com/projects/pic-puzzle/)
 
